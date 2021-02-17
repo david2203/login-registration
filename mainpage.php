@@ -1,22 +1,3 @@
-<?php
-
-$dsn = "mysql:host=localhost;dbname=logindb";
-$user ="root";
-$password = "";
-
-$pdo = new PDO ($dsn, $user, $password);
-
-
-
-
-$stm = $pdo->query("SELECT id, username, password FROM users");
-
-while($row = $stm->fetch()){
-
-    echo $row ["id"] . " Username:" . " " . $row ["username"] . " " . "Password: " . $row["password"] . "<br/>";
-}
-
-?>
 
 <br>
 <form method="POST" action="registration.php">

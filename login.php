@@ -23,6 +23,7 @@ if(isset($_POST['loginBtn'])){
                     $_SESSION['sess_user_id'] = $row['id'];
                     $_SESSION['sess_user_name'] = $row['username'];
                     $_SESSION['sess_name'] = $row['name'];
+                    header("location:loggedin.php");
                 }
                 else {
                     $msg = "Invalid username or password!";
@@ -51,7 +52,7 @@ if(isset($_POST['loginBtn'])){
 </head>
 <body>
 
-<form name="User" method="POST" action="loggedin.php" align="center">
+<form name="User" method="POST" action="login.php" align="center">
 
 <h3 align="center">Enter Login Details</h3>
  Username:<br>
